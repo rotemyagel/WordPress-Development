@@ -40,6 +40,16 @@ add_action( 'admin_enqueue_scripts', 'include_js_code_for_uploader' );
 		add_filter('show_admin_bar', '__return_false');
 	   }
 
+
+
+
+	  
+
+
+
+
+
 	include (STYLESHEETPATH . '/post-types/products.php');
 	include (STYLESHEETPATH . '/includes/wp-metabox.php');
 	include (STYLESHEETPATH . '/taxonomies/products-category.php');
+	include (STYLESHEETPATH . '/includes/wp-shortcode.php');

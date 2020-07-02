@@ -213,9 +213,12 @@ else {
       }
       
     /* Get the posted data and sanitize it for use as an HTML class. */
+    if(isset($_POST["image_src"])) {
       foreach($_POST['image_src'] as $value){	
         add_post_meta( $post->ID, 'image_src', $value, false );
       }
+
+    }
  
  
  

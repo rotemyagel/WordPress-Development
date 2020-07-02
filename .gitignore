@@ -1,0 +1,3 @@
+# Ignore the "wp-content/plugins" directory.
+
+wp-content/plugins/

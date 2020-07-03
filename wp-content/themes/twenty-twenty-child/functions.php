@@ -53,3 +53,4 @@ add_action( 'admin_enqueue_scripts', 'include_js_code_for_uploader' );
 	include (STYLESHEETPATH . '/includes/wp-metabox.php');
 	include (STYLESHEETPATH . '/taxonomies/products-category.php');
 	include (STYLESHEETPATH . '/includes/wp-shortcode.php');
+	include (STYLESHEETPATH . '/includes/wp-route.php');

@@ -23,28 +23,30 @@
 		$product_sale_price = $product_sale_price[0] ? $product_sale_price[0].'$' : '';
 		$product_onsale = get_post_meta($product_id, '_on_sale_checkbox_field');
 		$product_onsale = $product_onsale[0] ? '<span class="badge badge-secondary">'. __("On Sale", "twentytwenty_child").'</span>' : '';
-		$price_delete = $product_sale_price[0] ? 'disabled' : '';
+		$price_delete = $product_sale_price[0] ? 'disabled' : ''; ?>
  
-	echo $output =
 	
-	'<div class="col-lg-4 col-md-6 col-xs-12 mb-4">'
-	.'<div class="card h-100" style="background-color:'.$product_bg.';">'
-	.'<div class="card-header">'
-	.$product_image
-	.$product_onsale
-	.'</div>'
-	.'<div class="card-body">'.'<h5 class="card-title my-3">'.$product_title.'</h5>'
-	.'<div class="row">'
-	.'<h3 class="col-6 my-3 '.$price_delete.'">'.$product_price.'</h3>'
-	.'<h3 class="col-6 my-3">'.$product_sale_price.'</h3>'
-	.'</div>'
-	.'</div>'
-	.'</div>'
-	.'</div>';
-
+	
+	<div class="mb-4">
+	<div class="card card-shortcode" style="background-color: <?php echo $product_bg; ?>">
+	<div class="card-header">
+	<?php echo $product_image; ?>
+	<?php echo $product_onsale; ?>
+	</div>
+	<div class="card-body"><h5 class="card-title my-3"><?php echo $product_title; ?></h5>
+	<div class="row">
+	<h3 class="col-6 my-3 <?php echo $price_delete; ?>"><?php echo $product_price; ?></h3>
+	<h3 class="col-6 my-3"><?php echo $product_sale_price; ?></h3>
+	</div>
+	</div>
+	</div>
+    </div>
+    
+    <?php 
+    $output = ob_get_contents();    
 	ob_get_clean();
 
-    return $output;
+    return apply_filters( 'product_shortcode_extension', $output );
  
 }
  

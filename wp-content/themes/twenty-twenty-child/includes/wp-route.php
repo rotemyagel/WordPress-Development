@@ -3,7 +3,10 @@
 add_action('rest_api_init', 'products_rest');
 
 function products_rest(){
-    
+    /**
+     * custom json-api endpoint that receives a category id
+     * site-url/wp-json/products/v1/cat/category-id  
+     */
    register_rest_route('products/v1', 'cat/(?P<category_id>\d+)',  array(
 
     'methods' => WP_REST_SERVER::READABLE,
@@ -12,6 +15,11 @@ function products_rest(){
    ));
 }
 
+/**
+ * returns a list of products in a json format
+ * (title, description, image, price, is on sale, sale price)  
+ * 
+ */
 
 
 function products_output($data){

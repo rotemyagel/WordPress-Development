@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Registers the `products` post type.
+ * Registers custom post type called Products.
  */
 function products_init() {
 	register_post_type( 'products', array(

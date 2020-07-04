@@ -14,7 +14,8 @@
     object-fit: cover;
 }
 
- .badge.badge-secondary {
+
+.badge.badge-secondary {
     position: absolute;
     z-index: 1;
     top: 0;
@@ -22,6 +23,9 @@
     transform: translate(0, -50%);
 }
 
+.badge.badge-slider{
+    right: 15px;
+}
 .card-title {
     margin: 0;
 }
@@ -98,7 +102,7 @@ textarea {
 
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
+@media only screen and (min-width : 768px) {
 
     .card-shortcode {
         max-width: 348px;

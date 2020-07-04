@@ -17,6 +17,7 @@
 
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+		<!--  custom address bar color for mobile browsers. -->
 		<meta name="theme-color" content="<?php echo '#' . get_background_color(); ?>" />
 
 		<link rel="profile" href="https://gmpg.org/xfn/11">

@@ -1,10 +1,10 @@
 <?php
 
- // product shortcode with multiple attributes
+ //  product shortcode that display a product in a box
  function product_shortcode($attr){
 
 	ob_start();
- 
+    //Shortcode attributes: product id, bg color
     $args = shortcode_atts( array(
      
             'product_id' => 1,
@@ -12,11 +12,15 @@
             
  
 		), $attr );
-
-		$product_id = $args['product_id'];
-		$product_bg = $args['bg_color'];
-		$product_image = get_the_post_thumbnail($product_id);
-		$product_title = get_the_title($product_id);
+        //Product ID
+        $product_id = $args['product_id'];
+        //Box background color
+        $product_bg = $args['bg_color'];
+        //Product image
+        $product_image = get_the_post_thumbnail($product_id);
+        //Product title
+        $product_title = get_the_title($product_id);
+        //Product price
 		$product_price = get_post_meta($product_id, '_price_number');
 		$product_price = $product_price[0] ? $product_price[0].'$' : '';
 		$product_sale_price = get_post_meta($product_id, '_sale_price_number');
@@ -46,6 +50,7 @@
     $output = ob_get_contents();    
 	ob_get_clean();
 
+    // allows to override the returned value of the shortcode.
     return apply_filters( 'product_shortcode_extension', $output );
  
 }

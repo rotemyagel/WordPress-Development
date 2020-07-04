@@ -20,9 +20,13 @@ if ($query->posts) { ?>
         <?php foreach ($query->posts as $key => $product) { 
             
         $product_id = $product->ID;
+        //product title    
         $product_title = get_the_title($product_id);
+        //product link   
         $product_link = get_the_permalink($product_id);
+        //product on sale    
         $product_onsale = get_post_meta($product_id, '_on_sale_checkbox_field');
+        //product main image
         $product_image  = get_the_post_thumbnail($product_id);
 ?>
 
@@ -52,10 +56,7 @@ if ($query->posts) { ?>
     </div>
 </div>
 
-<?php } else{
-
-    echo 'No results!';
-}
+<?php } 
 
 // Restore original Post Data
 wp_reset_postdata();

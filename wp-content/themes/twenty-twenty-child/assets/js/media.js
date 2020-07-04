@@ -23,9 +23,9 @@ jQuery(function($){
       
       // Create a new media frame
       frame = wp.media({
-        title: 'Select or Upload Media Of Your Chosen Persuasion',
+        title: 'Select or Upload Media to Gallery',
         button: {
-          text: 'Use this media'
+          text: 'Add to Gallery'
         },
         multiple: false  // Set to true to allow multiple files to be selected
       });
@@ -47,7 +47,7 @@ jQuery(function($){
          <div class="image-wrapper w-full md:w-1/2 px-3">
          <input type="text" name="image_src[]" value="${attachment.url}">
          <div class="flex flex-wrap my-3">
-          <a class="delete-custom-img bg-red-500 hover:bg-red-700 text-white hover:text-white font-bold py-2 px-4 rounded" href="#">Remove this image</a>
+          <a class="delete-custom-img bg-red-500 hover:bg-red-700 text-white hover:text-white font-bold py-2 px-4 rounded" href="#">Remove THIS IMAGE</a>
           </div>
          </div>` );
         

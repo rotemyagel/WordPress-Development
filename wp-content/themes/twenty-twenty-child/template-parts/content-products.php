@@ -13,7 +13,7 @@ $query = new WP_Query($query_args);
 // Check that we found some products to display
 if ($query->posts) { ?>
 
-<div class="container my-4">
+<div class="container mt-5">
     <div class="row">
 
 
@@ -33,7 +33,7 @@ if ($query->posts) { ?>
 
 
 
-        <a href="<?php echo $product_link; ?>" class="product-link col-lg-4 col-md-6 col-xs-12 mb-4">
+        <a href="<?php echo $product_link; ?>" class="product-link col-lg-4 col-md-6 col-xs-12 mb-5">
 
             <div class="card h-100">
                 <div class="card-header">
